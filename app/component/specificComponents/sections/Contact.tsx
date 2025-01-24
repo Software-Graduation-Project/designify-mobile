@@ -3,7 +3,6 @@ import { View, Text, TextInput, Button, StyleSheet, Alert, ScrollView } from 're
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const form = useRef(null);
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
@@ -37,7 +36,6 @@ const Contact = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      
       <Text style={styles.label}>Name</Text>
       <TextInput
         style={styles.input}
@@ -54,7 +52,6 @@ const Contact = () => {
         placeholder="Enter your email"
         keyboardType="email-address"
       />
-     
 
       <Text style={styles.label}>Message</Text>
       <TextInput
@@ -65,10 +62,10 @@ const Contact = () => {
         multiline
         numberOfLines={4}
       />
-       <View style={styles.buttonContainer}>
+
+      <View style={styles.buttonContainer}>
         <Button title="Send" onPress={sendEmail} color="pink" />
       </View>
-      
     </ScrollView>
   );
 };
@@ -77,43 +74,43 @@ export default Contact;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 40,
+    padding: 20,
     backgroundColor: '#ffffff',
     flexGrow: 1,
   },
-  heading: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    textAlign: 'center',
-  },
   label: {
-    fontSize: 16,
+    fontSize: 18,
     marginBottom: 5,
-    fontWeight: '500',
-  },
+    fontWeight: '700',
+    color: '#E1A0AC', // Matching theme primary_dark color
+    fontFamily: 'Overlock, serif',
+   },
   input: {
     height: 40,
-    borderColor: '#ccc',
+    borderColor: 'rgb(220, 220, 220)',
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 10,
     paddingHorizontal: 10,
     marginBottom: 15,
     backgroundColor: '#fff',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Similar shadow to React
   },
   textarea: {
-    borderColor: '#ccc',
+    height: 100,
+    borderColor: 'rgb(220, 220, 220)',
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 10,
     paddingHorizontal: 10,
     paddingVertical: 10,
     marginBottom: 15,
     backgroundColor: '#fff',
-    textAlignVertical: 'top', // Ensures text starts from the top in multiline input
+    textAlignVertical: 'top', // Ensures text starts from the top
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Similar shadow to React
   },
   buttonContainer: {
-    marginTop: 10,
+    marginTop: 5,
     borderRadius: 8,
     overflow: 'hidden',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.238)', // Similar shadow to React
   },
 });

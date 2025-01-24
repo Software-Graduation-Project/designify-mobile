@@ -5,6 +5,9 @@ import { HomePage } from '../../../pages/HomePage';
 import FavoriteScreen from '../../../pages/products/FavoritePage'; // Create this screen
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../../../App'; // Adjust path if necessary
+import CartPage from '../../../pages/products/CartPage';
+import ShowcasePage from '../../../pages/products/ShowcasePage';
+import ProfilePage from '../../../features/profile/ProfilePage';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,7 +15,7 @@ export const BottomTabNavigator = () => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const handleNavigate = () => {
-    navigation.navigate('favorite');
+    navigation.navigate('Favorite');
   };
   return (
     <Tab.Navigator
@@ -83,9 +86,9 @@ export const BottomTabNavigator = () => {
     >
       <Tab.Screen name="Home" component={HomePage} />
       {/* <Tab.Screen name="Favorite" component={FavoriteScreen} /> */}
-      <Tab.Screen name="Cart" component={HomePage} />
-      <Tab.Screen name="Shops" component={HomePage} />
-      <Tab.Screen name="Profile" component= {HomePage}/>
+      <Tab.Screen name="Cart" component={CartPage} />
+      <Tab.Screen name="Shops" component={ShowcasePage} />
+      <Tab.Screen name="Profile" component= {ProfilePage}/>
     </Tab.Navigator>
   );
 };

@@ -1,78 +1,67 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
-import LottieView from 'lottie-react-native';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import LoginForm from '../../features/authentication/LoginForm'; // Adjust the path as needed
-import styled from 'styled-components/native';
 
 const LoginPage = () => {
   return (
-    <PageContainer>
-      {/* Lottie Animation as Background */}
-      <AnimatedBackground>
-        <LottieView
-          source={{ uri: 'https://lottie.host/1a8e801a-e220-49bf-9e42-a2a0c0a6dd3f/hwIuP7H4Bi.lottie' }}
-          autoPlay
-          loop
-          style={styles.lottie}
+    <View style={styles.pageContainer}>
+      {/* Background Image */}
+      <View style={styles.animatedBackground}>
+        <Image
+          source={require('../../../assets/store/login.png')}
+          style={styles.image}
         />
-      </AnimatedBackground>
+      </View>
+
       {/* Centered Login Form */}
-      <CenteredContainer>
-        <LoginContainer>
+      <View style={styles.centeredContainer}>
+        <View style={styles.loginContainer}>
           <LoginForm />
-        </LoginContainer>
-      </CenteredContainer>
-    </PageContainer>
+        </View>
+      </View>
+    </View>
   );
 };
 
 export default LoginPage;
 
-// Styled Components
-const PageContainer = styled.View`
-  flex: 1;
-  position: relative;
-`;
-
-const CenteredContainer = styled.View`
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-`;
-
-const LoginContainer = styled.View`
-  margin-right: 50px;
-
-  @media (max-width: 1024px) {
-    margin: 0 auto;
-    width: 70%;
-  }
-
-  @media (max-width: 768px) {
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-  }
-`;
-
-const AnimatedBackground = styled.View`
-  position: absolute;
-  top: -270px;
-  left: 0;
-  right: 0;
-  
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
+// Styles
+const { width } = Dimensions.get('window'); // Get screen width for responsive design
 
 const styles = StyleSheet.create({
-  lottie: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+  pageContainer: {
+    flex: 1,
+    backgroundColor: '#f5f5f5', // Light gray background for contrast
+    position: 'relative',
+  },
+  animatedBackground: {
     position: 'absolute',
-    top: 0,
-    left: 0,
+    top: 80,
+    alignSelf: 'center',
+  },
+  image: {
+    width: width * 2.2, // Responsive width, 90% of screen width
+    height: 320,
+    resizeMode: 'contain', // Maintain aspect ratio
+  },
+  centeredContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  loginContainer: {
+    width: '95%',
+    height:'auto',
+    top: 160, // Adjust position for better alignment
+    maxWidth: 400,
+    padding: 20,
+    backgroundColor: '#ffffff',
+    borderRadius: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 5, // Shadow for Android
   },
 });

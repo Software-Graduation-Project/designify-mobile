@@ -22,35 +22,14 @@ export const HeroSection = () => {
             <Text style={styles.blueText}>design and customize</Text> your order as you like
           </Text>
 
-          {/* <Text style={styles.paraText}>
-            You can order in whatever suits your taste! These features are made just for you.
-          </Text> */}
-
-          {/* Dashboard Button */}
-          {/* <TouchableOpacity
-            style={styles.button}
-           // onPress={() => navigation.navigate('Dashboard')} // Replace with your screen name
-          >
-            <Text style={styles.buttonText}>Dashboard</Text>
-          </TouchableOpacity> */}
-
-          {/* Social Icons */}
-          {/* <View style={styles.iconContainer}>
-            <AntDesign name="linkedin-square" size={24} color="pink" />
-            <AntDesign name="twitter" size={24} color="pink" />
-            <AntDesign name="youtube" size={24} color="pink" />
-            <AntDesign name="instagram" size={24} color="pink" />
-          </View> */}
         </View>
 
         {/* Right content - Lottie Animation */}
         <View style={styles.showcaseContainer}>
-          <LottieView
-            source={{ uri: 'https://lottie.host/3b41766d-fbf3-4b8d-92c1-52893a6fada6/q9AyrI26gM.lottie' }}
-            autoPlay
-            loop
-            style={styles.lottie}
-          />
+          <Image
+              source={require('../../../../assets/store/room.png')}
+              style={{ width: 350, height: 180 }}
+            />
         </View>
       </View>
     </View>
@@ -64,7 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   flexContainer: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
