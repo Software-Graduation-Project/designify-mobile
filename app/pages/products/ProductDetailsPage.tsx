@@ -173,6 +173,18 @@ export function ProductDetailsPage({ route }: any) {
       >
        <Image source={trashImagePath} style={styles.messageIcon} />
       </TouchableOpacity>
+      {product.cake3D && (
+  <TouchableOpacity
+    style={styles.cake3DButton}
+    onPress={() => {
+      const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+      navigation.navigate("Cake");
+    }}
+  >
+    <Text style={styles.cake3DButtonText}>3D Cake</Text>
+  </TouchableOpacity>
+)}
+
       <TabView
         navigationState={{ index, routes }}
         renderScene={SceneMap({
@@ -386,4 +398,26 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
+  cake3DButton: {
+    position: "absolute",
+    left: 290,
+    bottom: 320, // Adjust this value as needed for proper spacing
+    backgroundColor: "#D77F8F",
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 3,
+  },
+  cake3DButtonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  
 });

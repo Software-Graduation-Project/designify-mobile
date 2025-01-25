@@ -8,6 +8,7 @@ import { RootStackParamList } from '../../../../App'; // Adjust path if necessar
 import CartPage from '../../../pages/products/CartPage';
 import ShowcasePage from '../../../pages/products/ShowcasePage';
 import ProfilePage from '../../../features/profile/ProfilePage';
+import ChatScreen from '../../../pages/ChatScreen';
 
 const Tab = createBottomTabNavigator();
 

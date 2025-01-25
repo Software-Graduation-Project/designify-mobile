@@ -13,6 +13,8 @@ import { FavoriteProvider } from './app/context/FavoriteContext';
 import RegisterPage from './app/pages/user/RegisterPage';
 import StorePage from './app/pages/store/StorPage';
 import CakeWebView from './app/pages/store/CakeWebView';
+import ChatScreen from './app/pages/ChatScreen';
+import ChatScreenStore from './app/pages/ChatScreenStore';
 
 export type RootStackParamList = {
   WelcomPage: undefined;
@@ -25,6 +27,8 @@ export type RootStackParamList = {
   Store: undefined;
   Write:undefined;
   Cake:undefined;
+  ChatScreen:undefined;
+  ChatScreenStore:undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -59,6 +63,8 @@ export default function App() {
             <Stack.Screen name="ProductDetails" component={ProductDetailsPage} />
             <Stack.Screen name="Store" component={StorePage} />
             <Stack.Screen name="Cake" component={CakeWebView} />
+            <Stack.Screen name="ChatScreen" component={ChatScreen} />
+            <Stack.Screen name="ChatScreenStore" component={ChatScreenStore} />
           </Stack.Navigator>
         </NavigationContainer>
       </FavoriteProvider>

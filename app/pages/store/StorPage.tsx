@@ -6,6 +6,7 @@ import {
     Image,
     ScrollView,
     Button,
+    TouchableOpacity,
 } from "react-native";
 import { TabView, TabBar } from "react-native-tab-view";
 import ShowcasePage from "../products/ShowcasePage";
@@ -80,6 +81,13 @@ const StorePage = ({ navigation }: any) => {
                     />
                 )}
             />
+            <TouchableOpacity
+                    style={styles.chatButton}
+                    onPress={() => navigation.navigate("ChatScreenStore")} // Replace with your chat screen name in the navigator//message (2)
+                  >
+                    <Text style={styles.chatButtonText}><Image source={require('../../../assets/Icons/message (2).png')} style={{width: 45, height: 40}}/></Text>
+            </TouchableOpacity>
+
         </View>
     );
 };
@@ -146,4 +154,24 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         color: "#333",
     },
+    chatButton: {
+        position: "absolute",
+        bottom: 20,
+        right: 20,
+        width: 70,
+        height: 70,
+        borderRadius: 34, // Makes the button circular
+        backgroundColor: "#d77f8faf", // Customizable color
+        justifyContent: "center",
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
+        elevation: 5, // Adds shadow for Android
+      },
+      chatButtonText: {
+        fontSize: 30, // Adjust icon/text size
+        color: "#FFF",
+      },
 });
