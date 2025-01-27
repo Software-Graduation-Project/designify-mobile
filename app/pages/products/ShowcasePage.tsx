@@ -22,7 +22,7 @@ const products: {
       description: "Delicious mini cakes",
       price: 5.99,
       rating: 3.5,
-      image: require("../../../assets/categories/cake3.png"),
+      image: require("../../../assets/image/cupCake.png"),// /images/chocoCake.png
       customizations: {
         Color:["🟣", "🟤", "🔵" ,"🟠"],
         Filling: ["Caramel", "Chocolate"],
@@ -37,7 +37,7 @@ const products: {
       description: "Rich chocolate flavor",
       price: 10.99,
       rating: 4.5,
-      image: require("../../../assets/categories/cake3.png"),
+      image: require("../../../assets/image/chocoCake.png"),
       cake3D: true,
       customizations: {
         Filling: ["Caramel", "Chocolate"],
@@ -48,11 +48,11 @@ const products: {
     },
     {
       id: "3",
-      name: "Vanilla Cake",
-      description: "Classic vanilla cake",
+      name: "Caramel Cake",
+      description: "Classic Caramel cake",
       price: 8.99,
       rating: 3.5,
-      image: require("../../../assets/categories/cake3.png"),
+      image: require("../../../assets/image/cramelCake.png"),
       cake3D: true,
       customizations: {
         Filling: ["Caramel", "Chocolate"],
@@ -67,7 +67,22 @@ const products: {
       description: "Classic vanilla cake",
       price: 8.99,
       rating: 5,
-      image: require("../../../assets/categories/cake3.png"),
+      image: require("../../../assets/image/WhiteCake.png"),
+      cake3D: true,
+      customizations: {
+        Filling: ["Caramel", "Chocolate"],
+        Size: ["S", "L", "XL"],
+        Topping: ["Fruits", "Nuts"],
+      },
+      message: "No message !!",
+    },
+    {
+      id: "5",
+      name: "Strawberry Cake",
+      description: "Classic vanilla cake",
+      price: 8.99,
+      rating: 5,
+      image: require("../../../assets/image/strawberryCake.png"),
       cake3D: true,
       customizations: {
         Filling: ["Caramel", "Chocolate"],
@@ -80,11 +95,11 @@ const products: {
   Cookies: [
     {
       id: "4",
-      name: "Chocolate Cookies",
+      name: "Vanilla Cookies",
       description: "Crunchy and chocolatey",
-      price: 3.99,
+      price: 3.5,
       rating: 4.0,
-      image: "https://via.placeholder.com/100",
+      image: require("../../../assets/image/ChocoCookies.png"),//darkCookies
       customizations: {
         Filling: ["Caramel", "Chocolate"],
         Colors: ["White", "Cream"],
@@ -92,11 +107,23 @@ const products: {
     },
     {
       id: "5",
-      name: "Vanilla Cookies",
+      name: "Chocolate Cookies",
       description: "Soft vanilla cookies",
-      price: 3.49,
+      price: 3.5,
       rating: 4.5,
-      image: "https://via.placeholder.com/100",
+      image: require("../../../assets/image/darkCookies.png"),
+      customizations: {
+        Filling: ["Caramel", "Chocolate"],
+        Colors: ["White", "Cream"],
+      },
+    },
+    {
+      id: "6",
+      name: "Red Velvet Cookies",
+      description: "Soft vanilla cookies",
+      price: 3.99,
+      rating: 4.5,
+      image: require("../../../assets/image/RedCookies.png"),
       customizations: {
         Filling: ["Caramel", "Chocolate"],
         Colors: ["White", "Cream"],
@@ -106,11 +133,11 @@ const products: {
   Chocolate: [
     {
       id: "6",
-      name: "Dark Chocolate",
+      name: "Milk Chocolate",
       description: "Intense dark chocolate",
       price: 2.99,
       rating: 3.0,
-      image: "https://via.placeholder.com/100",
+      image:  require("../../../assets/image/darkChocoBar.png"),
       customizations: {
         Filling: ["Caramel", "Chocolate"],
         Colors: ["White", "Cream"],
@@ -118,11 +145,11 @@ const products: {
     },
     {
       id: "7",
-      name: "Milk Chocolate",
+      name: "Dark Chocolate",
       description: "Smooth and creamy",
       price: 2.49,
       rating: 3.5,
-      image: "https://via.placeholder.com/100",
+      image: require("../../../assets/image/chocoBar.png"),
     },
   ],
 };

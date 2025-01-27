@@ -14,7 +14,7 @@ export const HeroSection = () => {
         <View style={styles.textContainer}>
           <Text style={styles.heading}>
             WELCOME TO{' '}
-            <Text style={styles.blueText}>DESIGNFY!</Text>
+            <Text style={styles.blueText}>Craftopia!</Text>
           </Text>
 
           <Text style={styles.subHeading}>

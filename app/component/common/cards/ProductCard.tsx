@@ -60,7 +60,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <View style={styles.card}>
       <View style={styles.header}>
-        <Image source={image} style={styles.image} />
+      <View style={{ aspectRatio: 1, width: 120, borderRadius: 8, overflow: "hidden" }}>
+  <Image source={image} style={styles.image} resizeMode="cover" />
+</View>
+
+
+        
         <HeartToggle isFavorite={isFavorite} onToggleFavorite={onToggleFavorite} />
       </View>
       <View style={styles.body}>
@@ -106,12 +111,15 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
+    
+    
   },
   image: {
-    width: 110,
-    height: 110,
+    width: "100%",
+    height: "100%",
     borderRadius: 8,
   },
+  
   heart: {
     fontSize: 28,
     width: 32,

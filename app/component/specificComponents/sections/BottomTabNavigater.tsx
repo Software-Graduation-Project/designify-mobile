@@ -27,7 +27,7 @@ export const BottomTabNavigator = () => {
               source={require('../../../../assets/Icons/logo2.png')}
               style={styles.logo}
             />
-            <Text style={styles.title}>Designfy</Text>
+            <Text style={styles.title}>Craftopia</Text>
           </View>
         ),
         headerRight: () => (

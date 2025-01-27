@@ -150,7 +150,10 @@ export function ProductDetailsPage({ route }: any) {
           </Text>
         </TouchableOpacity>
       </View>
-      <Image source={product.image} style={styles.image} />
+            <View style={{ aspectRatio: 1, width: 190, borderRadius: 8, overflow: "hidden", left: 90 }}>
+            <Image source={product.image} style={styles.image} />
+            </View>
+      
       <Text style={styles.name}>{product.name}</Text>
       <Text style={styles.description}>{product.description}</Text>
       <View style={styles.starContainer}>
@@ -241,10 +244,12 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
   },
   image: {
-    width: "90%",
-    height: 160,
+    width: "120%",
+    height: "100%",
+    right: 20,
     borderRadius: 10,
    // marginBottom: 10,
+
   },
   name: {
     fontSize: 24,
