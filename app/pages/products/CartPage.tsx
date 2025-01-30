@@ -134,7 +134,7 @@ export default function CartPage() {
                     "Are you sure you want to pay?",
                     [
                       { text: "Cancel", style: "cancel" },
-                      { text: "Pay", style: "destructive" },
+                      { text: "Pay", style: "destructive" , onPress: clearCart},
                     ]
                   )
                 }

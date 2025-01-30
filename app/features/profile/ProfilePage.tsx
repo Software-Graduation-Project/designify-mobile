@@ -45,8 +45,9 @@ export default function ProfilePage() {
             uri: "https://placekitten.com/200/200",
           }}
         />
-        <Text style={styles.name}>Andrea Davis</Text>
-        <Text style={styles.email}>andrea@domainname.com</Text>
+        <Text style={styles.name}>
+          User</Text>
+        <Text style={styles.email}>user@gmail.com</Text>
       </View>
 
       {/* Action Buttons */}
